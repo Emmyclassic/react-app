@@ -30,7 +30,7 @@ jobs:
     - name: Deploy
       run: |
         git config --global user.name Emmyclassic
-        git config --global user.email olabisiiyanda55gmail.com
+        git config --global user.email olabisiiyanda55@gmail.com
         git remote set-url origin https://${ACTIONS_DEPLOY_ACCESS_TOKEN}@github.com/auth-app
         npm run deploy
       env:
