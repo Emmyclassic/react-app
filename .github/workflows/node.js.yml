@@ -29,12 +29,12 @@ jobs:
     
     - name: Deploy
       run: |
-        git config --global user.name Emmyclassic
-        git config --global user.email olabisiiyanda55@gmail.com
-        git remote set-url origin https://Emmyclassic.github.io/react-app
+        git config --global user.name $user_name
+        git config --global user.email $user_email
+        git remote set-url origin https://${github_token}@github.com/${repository}
         npm run deploy
       env:
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+        user_name: 'Emmyclassic'
+        user_email: 'olabisiiyanda55@gmail.com'
         github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
         repository: ${{ github.repository }}
